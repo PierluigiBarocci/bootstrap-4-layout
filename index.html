@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Bootstrap 4 Layout</title>
+    </head>
+    <body>
+        <!-- navbar tipicizza il suo contenitore, ma da solo non basta: servono almeno un altro paio di classi. In questo caso l'expand-lg e il colore dark (erano utilizzabili anche light o primary ad esempio)-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-between">
+            <a href="#" class="navbar-brand">
+                <img src="images/logo.png" alt="logo" height="40" class="d-inline-block align-top">
+            </a>
+            <!-- toggler utilizzato per collassare gli elementi in mobile -->
+            <button type="button" class="navbar-toggler">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse">
+                <!-- navbar-nav garantisce la visualizzazione di ul, mr-auto lo sposta tutto a sinistra -->
+                <ul class="navbar-nav mr-auto">
+                    <!-- nav-item qua servirà solo a Javascript, mentre nav-link ha anche una funzione grafica utile; active invece si definisce utility (ce ne sono parecchie ma la più utilizzata, insieme ad active, è disabled) -->
+                    <li class="nav-item active">
+                        <a href="#" class="nav-link">Link1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Link2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Link3</a>
+                    </li>
+                </ul>
+                <!-- si può aggiunger anche un form per un login o un pulsante -->
+                <form class="form-inline">
+                    <input type="search" class="form-control mr-sm-2" placeholder="Search">
+                    <button type="submit" class="btn btn-light">Search</button>
+                </form>
+            </div>
+        </nav>
+
+        <!-- !!!Jumbotron!!! -->
+        <div class="jumbotron jumbotron-fluid">
+            <!-- qui l'accoppiata jumboton-fluid e figlio container, fa sì che il jumbotron occupi tutta la viewport (fluid) abbia margini automatici responsive (container) e perda gli angoli smussati. Perfetto! -->
+            <div class="container text-center">
+                <h1 class="display-4">Questo è un Jumbotron!!</h1>
+                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, obcaecati.</p>
+                <hr class="my-4">
+                <p>Può essere anche utilizzato per cta specifiche</p>
+                <p class="lead">
+                    <a href="#" class="btn btn-dark btn-lg">Ok, j'ai compris</a>
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
